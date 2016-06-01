@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+  <title>Wortliste</title>
+
+  <script type="text/javascript" src="global.js"></script>
+
+  <style type="text/css">
+    .Buchstabe {
+      text-align: right;
+      font-size: 50px;
+    }
+
+    .wort {
+/*     width: 20em; */
+       direction: rtl;
+       padding-left: 1em;
+       font-size: 23px;
+    }
+    .mf {
+      padding-left: 1em;
+    }
+
+  </style>
+
+  <script type="text/javascript">
+
+function main() {
+
+  var tab = document.getElementById('woerter');
+  for (var r = 0; r < tab.rows.length; r++) {
+    var row = tab.rows[r];
+  
+    if (row.cells[0].classList.contains('Buchstabe')) {
+       row.cells[0].setAttribute('colspan', 4);
+       row.cells[0].style.fontFamily = font_hebr;
+    }
+    else {
+      
+      if (row.cells.length != 4) { alert('row ' + r + ', cells.length: ' + row.cells.length) }
+
+      row.cells[0].style.fontFamily = font_text;
+      row.cells[1].style.fontFamily = font_text;
+      row.cells[2].style.fontFamily = font_text;
+      row.cells[3].style.fontFamily = font_hebr;
+
+      row.cells[2].className += ' mf';
+      row.cells[3].className += ' wort';
+
+    }
+  }
+
+}
+
+  </script>
+
+</head>
+<body onload='main();'>
+
+  <table id='woerter' summary='W&ouml;rter'>
+
+<tr><td class='Buchstabe'>א</td></tr><!--{ 1-635- -->
+<tr id='s347'><td></td><td>Hiob (gehasst)</td><td>m</td><td>אִיּוֹב</td></tr>
+<tr id='s351'><td></td><td>Wie?</td><td></td><td>אֵיכָה</td></tr>
+<tr id='s635'><td></td><td>Esther (Stern)</td><td></td><td>אֶסְתֵּר</td></tr>
+<!--}-->
+<tr><td class='Buchstabe'>ב</td></tr><!--{-->
+<!--}-->
+<tr><td class='Buchstabe'>ג</td></tr><!--{-->
+<!--}-->
+<tr><td class='Buchstabe'>ד</td></tr><!--{ -1697-1840- -->
+<tr id='s1697'><td></td><td>Wort</td><td>m</td><td>דָּבָר</td></tr>
+<tr id='s1840'><td></td><td>Daniel (mein Richter ist Gott)</td><td></td><td>דִּנִיֵּאל</td></tr>
+<!--}-->
+<tr><td class='Buchstabe'>ה</td></tr><!--{ -1994-2265- -->
+<tr id='s1994'><td></td><td>Hosea (Rettung)</td><td>m</td><td>הוֹשֵׁעַ</td></tr>
+<!--}-->
+<tr><td class='Buchstabe'>ו</td></tr><!--{-->
+<!--}-->
+<tr><td class='Buchstabe'>ז</td></tr><!--{ -2146- -->
+<tr id='s2146'><td></td><td>Sacharia (Gott erinnert sich)</td><td>m</td><td>זְכַרְיָה</td></tr>
+<!--}-->
+<tr><td class='Buchstabe'>ח</td></tr><!--{ -2265-2292- -->
+<tr id='s2265'><td></td><td>Habakuk</td><td>m</td><td>חֲבַקּוּק</td></tr>
+<tr id='s2292'><td></td><td>Haggai</td><td>m</td><td>חַגַּי</td></tr>
+<tr id='s2568'><td></td><td>fünf</td><td></td><td>חָמֵשׁ</td></tr>
+<!--}-->
+<tr><td class='Buchstabe'>ט</td></tr><!--{-->
+<!--}-->
+<tr><td class='Buchstabe'>י</td></tr><!--{ -3091- -->
+<tr id='s3091'><td></td><td>Josua</td><td>m</td><td>יְהוֹשׁוּעַ</td></tr>
+<tr id='s3100'><td></td><td>Joel</td><td>m</td><td>יוֹאֵל</td></tr>
+<tr id='s3124'><td></td><td>Jona (Tabue)</td><td>m</td><td>יוֹנָה</td></tr>
+<tr id='s3168'><td></td><td>Hesekiel</td><td>m</td><td>יְחֶזְקֵאל</td></tr>
+<tr id='s3177'><td></td><td>Tag</td><td>m</td><td>יוֹם</td></tr>
+<tr id='s3414'><td></td><td>Jeremia</td><td>m</td><td>יִרְמְיָה</td></tr>
+<tr id='s3470'><td></td><td>Jessaja</td><td>m</td><td>יְשַׁעְיָה</td></tr>
+<!--}-->
+<tr><td class='Buchstabe'>כ</td></tr><!--{ -3789- -->
+<tr id='s3789'><td></td><td>schreiben</td><td></td><td>כָּתַב</td></tr>
+<!--}-->
+<tr><td class='Buchstabe'>ל</td></tr><!--{-->
+<!--}-->
+<tr><td class='Buchstabe'>מ</td></tr><!--{ -4057-4912- -->
+<tr id='s4039'><td></td><td>Rolle</td><td>f</td><td>מְגִלָּה</td></tr>
+<tr id='s4057'><td></td><td>Wüste</td><td>m</td><td>מִדְבָּר</td></tr>
+<tr id='s4318'><td></td><td>Micha (Wer ist wie Gott)</td><td>m</td><td>יוֹנָה</td></tr>
+<tr id='s4401'><td></td><td>Maleachi</td><td>m</td><td>מַלְאָכִי</td></tr>
+<tr id='s4428'><td></td><td>König</td><td>m</td><td>מֶלֶךְ</td></tr>
+<tr id='s4912'><td></td><td>Spruch/Gleichnis</td><td>m</td><td>מָשָׁל</td></tr>
+<!--}-->
+<tr><td class='Buchstabe'>נ</td></tr><!--{ -5151- -->
+<tr id='s5151'><td></td><td>Nahum (Trost)</td><td></td><td>נַחוּם</td></tr>
+<tr id='s5166'><td></td><td>Nehemia(Gott tröstet)</td><td></td><td>נְחֶמְיָה</td></tr>
+<!--}-->
+<tr><td class='Buchstabe'>ס</td></tr><!--{-->
+<!--}-->
+<tr><td class='Buchstabe'>ע</td></tr><!--{ -5662-5986- -->
+<tr id='s5662'><td></td><td>Obadja (Diener Gottes)</td><td></td><td>עֹבַדְיָה</td></tr>
+<tr id='s5830'><td></td><td>Esra (Hilfe)</td><td></td><td>עֶזְרָא</td></tr>
+<tr id='s5986'><td></td><td>Amos (Last)</td><td></td><td>עָמוֹס</td></tr>
+<!--}-->
+<tr><td class='Buchstabe'>פ</td></tr><!--{-->
+<!--}-->
+<tr><td class='Buchstabe'>צ</td></tr><!--{-->
+<tr id='s6846'><td></td><td>Zephania</td><td>m</td><td>צְפַנְיָה</td></tr>
+<!--}-->
+<tr><td class='Buchstabe'>ק</td></tr><!--{ -6953-7121- -->
+<tr id='s6953'><td></td><td>Prediger</td><td></td><td>קֹהֶלֶת</td></tr>
+<tr id='s7121'><td></td><td>rufen</td><td></td><td>קָרָא</td></tr>
+<!--}-->
+<tr><td class='Buchstabe'>ר</td></tr><!--{ -7225-7327-  -->
+<tr id='s7225'><td></td><td>Anfang</td><td>f</td><td>רֵאשִׁית</td></tr>
+<tr id='s7327'><td></td><td>Ruth</td><td></td><td>רוּת</td></tr>
+<!--}-->
+<tr><td class='Buchstabe'>ש</td></tr><!--{ -7892-8199- -->
+<tr id='s7892'><td></td><td>Lied</td><td>f</td><td>שִׁיר</td></tr>
+<tr id='s8034'><td></td><td>Name</td><td>m</td><td>שֵׁם</td></tr>
+<tr id='s8050'><td></td><td>Samuel (Sein Name ist Gott)</td><td>m</td><td>שְׁמוּאֵל</td></tr>
+<tr id='s8199'><td></td><td>richten</td><td></td><td>שָׁפַט</td></tr>
+<!--}-->
+<tr><td class='Buchstabe'>ת</td></tr><!--{ -->
+<!--}-->
+
+
+  </table>
+
+</body>
+</html>
