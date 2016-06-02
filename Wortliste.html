@@ -6,27 +6,21 @@
 
   <script type="text/javascript" src="global.js"></script>
 
-  <style type="text/css">
-    .Buchstabe {
-      text-align: right;
-      font-size: 50px;
-    }
-
-    .wort {
-/*     width: 20em; */
-       direction: rtl;
-       padding-left: 1em;
-       font-size: 23px;
-    }
-    .mf {
-      padding-left: 1em;
-    }
-
-  </style>
-
   <script type="text/javascript">
 
+function localCSSRules() {
+
+  addCssRule(' .mf { padding-left: 1em; }');
+  addCssRule(' .wort { direction: rtl; padding-left: 1em; font-size: 23px;}');
+  addCssRule(' .Buchstabe { text-align: right; font-size: 50px; }');
+
+}
+
 function main() {
+
+  insertGlobalStyleSheet();
+  localCSSRules();
+
 
   var tab = document.getElementById('woerter');
   for (var r = 0; r < tab.rows.length; r++) {

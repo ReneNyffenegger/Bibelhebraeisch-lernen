@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+  <title>Buchstaben (Otiyot)</title>
+
+  <script type="text/javascript" src="global.js"></script>
+
+  <script type="text/javascript">
+
+function localCSSRules() {
+
+  addCssRule('tr {vertical-align: top}');
+
+  addCssRule('.buchstabe {clear:both}');
+  addCssRule('.buchstabe .H {font-size:70px;width:40px;float:left; font-family:' + font_hebr + '; /*background-color:blue;*/}');
+  addCssRule('.buchstabe .M .nameH {font-size:20px; font-family: ' + font_hebr +'; }');
+  addCssRule('.buchstabe .M .nameD {font-size:13px}');
+  addCssRule('.buchstabe .M .value {font-size:9px;font-style:italic}');
+  addCssRule('.buchstabe .M {padding-top:30px;/*background-color:yellow*/}');
+  addCssRule('.buchstabe .M .desc {/*background-color:red;*/float:left;width:70px}');
+  addCssRule('.buchstabe .M .traits {font-size:9px;}');
+
+}
+
+function main() {
+
+  insertGlobalStyleSheet();
+  localCSSRules();
+
+}
+
+
+  </script>
+</head>
+
+<body onload='main()'>
+
+<table summary='.' class='otiyot'> <!--{-->
+<tr><!--{-->
+<td><!--{-->
+   <div class='buchstabe'>
+     <div class='H'>ט</div>
+     <div class='M'>
+        <div class='desc'>
+          <div class='nameH'>טֵית</div>
+          <div class='nameD'>Tet</div>
+          <div class='value'>9</div>
+          <div class='traits'></div>
+        </div>   
+        <div class='txt'>
+        </div>
+     </div>
+   </div>
+</td><!--}-->
+<td><!--{-->
+   <div class='buchstabe'>
+     <div class='H'>ח</div>
+     <div class='M'>
+        <div class='desc'>
+          <div class='nameH'>חֵית</div>
+          <div class='nameD'>Chet</div>
+          <div class='value'>8</div>
+          <div class='traits'></div>
+        </div>   
+<!--     <div class='txt'>
+           Buchstabe = Wav + Zajin.
+        </div> -->
+     </div>
+   </div>
+</td><!--}-->
+<td><!--{-->
+   <div class='buchstabe'>
+     <div class='H'>ז</div>
+     <div class='M'>
+        <div class='desc'>
+          <div class='nameH'>זָיִן</div>
+          <div class='nameD'>Zajin</div>
+          <div class='value'>7</div>
+          <div class='traits'></div>
+        </div>   
+<!--    <div class='txt'>
+          Bedeutung: Schwert, Waffe
+        </div> -->
+     </div>
+   </div>
+</td><!--}-->
+<td><!--{-->
+   <div class='buchstabe'>
+     <div class='H'>ו</div>
+     <div class='M'>
+        <div class='desc'>
+          <div class='nameH'>וָו</div>
+          <div class='nameD'>Wav</div>
+          <div class='value'>6</div>
+          <div class='traits'></div>
+        </div>   
+<!--    <div class='txt'>
+          Bedeutung: Haken (<a href='http://bibel.renenyffenegger.ch/2mo_27.html#v10'>2.&nbsp;Mo&nbsp;27,10</a>)
+        </div> -->
+     </div>
+   </div>
+</td><!--}-->
+<td><!--{-->
+   <div class='buchstabe'>
+     <div class='H'>ה</div>
+     <div class='M'>
+        <div class='desc'>
+          <div class='nameH'>הֵא</div>
+          <div class='nameD'>He</div>
+          <div class='value'>5</div>
+          <div class='traits'>D</div>
+        </div>   
+<!--    <div class='txt'>
+          Der definite Artikel.
+        </div> -->
+     </div>
+   </div>
+</td><!--}-->
+<td><!--{-->
+   <div class='buchstabe'>
+     <div class='H'>ד</div>
+     <div class='M'>
+        <div class='desc'>
+          <div class='nameH'>דָּלֶת</div>
+          <div class='nameD'>Dalet</div>
+          <div class='value'>4</div>
+          <div class='traits'>D</div>
+        </div>   
+<!--    <div class='txt'>
+        </div>-->
+     </div>
+   </div>
+</td><!--}-->
+<td><!--{-->
+   <div class='buchstabe'>
+     <div class='H'>ג</div>
+     <div class='M'>
+        <div class='desc'>
+          <div class='nameH'>גִּמֶל</div>
+          <div class='nameD'>Gimel</div>
+          <div class='value'>3</div>
+          <div class='traits'>D</div>
+        </div>   
+<!--    <div class='txt'>
+        </div>-->
+     </div>
+   </div>
+</td><!--}-->
+<td><!--{-->
+   <div class='buchstabe'>
+     <div class='H'>ב</div>
+     <div class='M'>
+        <div class='desc'>
+          <div class='nameH'>בֵּית</div>
+          <div class='nameD'>Beth</div>
+          <div class='value'>2</div>
+          <div class='traits'>D</div>
+        </div>   
+<!--    <div class='txt'>
+        </div>-->
+     </div>
+   </div>
+</td><!--}-->
+<td><!--{-->
+   <div class='buchstabe'>
+     <div class='H'>א</div>
+     <div class='M'>
+        <div class='desc'>
+          <div class='nameH'>אָלֶף</div>
+          <div class='nameD'>Aleph</div>
+          <div class='value'>1</div>
+          <div class='traits'></div>
+        </div>   
+<!--    <div class='txt'>
+             Beachte: der Zahlenwert von <b>אלף</b> ist <b>111</b>.
+        </div>-->
+     </div>
+   </div>
+</td><!--}-->
+</tr><!--}-->
+<tr><!--{-->
+<td><!--{-->
+   <div class='buchstabe'>
+     <div class='H'>צ</div>
+     <div class='M'>
+        <div class='desc'>
+          <div class='nameH'>צָדֵי</div>
+          <div class='nameD'>Zade</div>
+          <div class='value'>90</div>
+          <div class='traits'></div>
+        </div>   
+<!--    <div class='txt'>
+        </div>-->
+     </div>
+   </div>
+</td><!--}-->
+<td><!--{-->
+   <div class='buchstabe'>
+     <div class='H'>פ</div>
+     <div class='M'>
+        <div class='desc'>
+          <div class='nameH'>פֵּא</div>
+          <div class='nameD'>Pe</div>
+          <div class='value'>80</div>
+          <div class='traits'>D</div>
+        </div>   
+<!--    <div class='txt'>
+          Bedeutung: Mund.
+        </div>-->
+     </div>
+   </div>
+</td><!--}-->
+<td><!--{-->
+   <div class='buchstabe'>
+     <div class='H'>ע</div>
+     <div class='M'>
+        <div class='desc'>
+          <div class='nameH'>עַיִן</div>
+          <div class='nameD'>Ajin</div>
+          <div class='value'>70</div>
+          <div class='traits'></div>
+        </div>   
+<!--    <div class='txt'>
+           Bedeutung: Auge.
+        </div>-->
+     </div>
+   </div>
+</td><!--}-->
+<td><!--{-->
+   <div class='buchstabe'>
+     <div class='H'>ס</div>
+     <div class='M'>
+        <div class='desc'>
+          <div class='nameH'>סָמֶךְ</div>
+          <div class='nameD'>Samech</div>
+          <div class='value'>60</div>
+          <div class='traits'></div>
+        </div>   
+<!--    <div class='txt'>
+          Bedeutung: to lean upon (2. Mo 29:10?)
+        </div>-->
+     </div>
+   </div>
+</td><!--}-->
+<td><!--{-->
+   <div class='buchstabe'>
+     <div class='H'>נ</div>
+     <div class='M'>
+        <div class='desc'>
+          <div class='nameH'>נוּן</div>
+          <div class='nameD'>Nun</div>
+          <div class='value'>50</div>
+          <div class='traits'></div>
+        </div>   
+<!--    <div class='txt'>
+        </div>-->
+     </div>
+   </div>
+</td><!--}-->
+<td><!--{-->
+   <div class='buchstabe'>
+     <div class='H'>מ</div>
+     <div class='M'>
+        <div class='desc'>
+          <div class='nameH'>מֵם</div>
+          <div class='nameD'>Mem</div>
+          <div class='value'>40</div>
+          <div class='traits'></div>
+        </div>   
+<!--    <div class='txt'>
+        </div>-->
+     </div>
+   </div>
+</td><!--}-->
+<td><!--{-->
+   <div class='buchstabe'>
+     <div class='H'>ל</div>
+     <div class='M'>
+        <div class='desc'>
+          <div class='nameH'>לָמֶד</div>
+          <div class='nameD'>Lamed</div>
+          <div class='value'>30</div>
+          <div class='traits'></div>
+        </div>   
+<!--    <div class='txt'>
+            Der mittlere (?) Buchstaben. Bedetung: lehren (5. Mose 4:1).
+            Prefix: zu, nach.
+        </div>-->
+     </div>
+   </div>
+</td><!--}-->
+<td><!--{-->
+   <div class='buchstabe'>
+     <div class='H'>כ</div>
+     <div class='M'>
+        <div class='desc'>
+          <div class='nameH'>כַּף</div>
+          <div class='nameD'>Kaf</div>
+          <div class='value'>20</div>
+          <div class='traits'>D</div>
+        </div>   
+<!--    <div class='txt'>
+          Bedeutung: Handfl&auml;che, als Prefix: wie. Als Suffix: Eigentum.
+        </div>-->
+     </div>
+   </div>
+</td><!--}-->
+<td><!--{-->
+   <div class='buchstabe'>
+     <div class='H'>י</div>
+     <div class='M'>
+        <div class='desc'>
+          <div class='nameH'>יוֹד</div>
+          <div class='nameD'>Jod</div>
+          <div class='value'>10</div>
+          <div class='traits'></div>
+        </div>   
+<!--    <div class='txt'>
+          Bedeutung: Hand.
+        </div>-->
+     </div>
+   </div>
+</td><!--}-->
+</tr><!--}-->
+<tr><!--{-->
+<td><!--{-->
+   <div class='buchstabe'>
+     <div class='H'>ץ</div>
+     <div class='M'>
+        <div class='desc'>
+          <div class='nameH'>צָדֵי סופית</div>
+          <div class='nameD'>Zade Sofit</div>
+          <div class='value'>900</div>
+          <div class='traits'></div>
+        </div>   
+<!--    <div class='txt'>
+        </div>-->
+     </div>
+   </div>
+</td><!--}-->
+<td><!--{-->
+   <div class='buchstabe'>
+     <div class='H'>ף</div>
+     <div class='M'>
+        <div class='desc'>
+          <div class='nameH'>פֵּא סופית</div>
+          <div class='nameD'>Pe Sofit</div>
+          <div class='value'>800</div>
+          <div class='traits'></div>
+        </div>   
+        <div class='txt'>
+        </div>
+     </div>
+   </div>
+</td><!--}-->
+<td><!--{-->
+   <div class='buchstabe'>
+     <div class='H'>ן</div>
+     <div class='M'>
+        <div class='desc'>
+          <div class='nameH'>נוּן סופית</div>
+          <div class='nameD'>Nun Sofit</div>
+          <div class='value'>700</div>
+          <div class='traits'></div>
+        </div>   
+<!--    <div class='txt'>
+        </div>-->
+     </div>
+   </div>
+</td><!--}-->
+<td><!--{-->
+   <div class='buchstabe'>
+     <div class='H'>ם</div>
+     <div class='M'>
+        <div class='desc'>
+          <div class='nameH'>מֵם סופית</div>
+          <div class='nameD'>Mem Sofit</div>
+          <div class='value'>600</div>
+          <div class='traits'></div>
+        </div>   
+<!--    <div class='txt'>
+        </div>-->
+     </div>
+   </div>
+</td><!--}-->
+<td><!--{-->
+   <div class='buchstabe'>
+     <div class='H'>ך</div>
+     <div class='M'>
+        <div class='desc'>
+          <div class='nameH'>כַּף סופית</div>
+          <div class='nameD'>Kaf Sofit</div>
+          <div class='value'>500</div>
+          <div class='traits'></div>
+        </div>   
+<!--    <div class='txt'>
+        </div>-->
+     </div>
+   </div>
+</td><!--}-->
+<td><!--{-->
+   <div class='buchstabe'>
+     <div class='H'>ת</div>
+     <div class='M'>
+        <div class='desc'>
+          <div class='nameH'>תָּו</div>
+          <div class='nameD'>Tav</div>
+          <div class='value'>400</div>
+          <div class='traits'></div>
+        </div>   
+<!--    <div class='txt'>
+        </div>-->
+     </div>
+   </div>
+</td><!--}-->
+<td><!--{-->
+   <div class='buchstabe'>
+     <div class='H'>ש</div>
+     <div class='M'>
+        <div class='desc'>
+          <div class='nameH'>שִׁין</div>
+          <div class='nameD'>Schin</div>
+          <div class='value'>300</div>
+          <div class='traits'></div>
+        </div>   
+<!--    <div class='txt'>
+        </div>-->
+     </div>
+   </div>
+</td><!--}-->
+<td><!--{-->
+   <div class='buchstabe'>
+     <div class='H'>ר</div>
+     <div class='M'>
+        <div class='desc'>
+          <div class='nameH'>רֵישׁ</div>
+          <div class='nameD'>Resch</div>
+          <div class='value'>200</div>
+          <div class='traits'></div>
+        </div>   
+<!--    <div class='txt'>
+        </div>-->
+     </div>
+   </div>
+</td><!--}-->
+<td><!--{-->
+   <div class='buchstabe'>
+     <div class='H'>ק</div>
+     <div class='M'>
+        <div class='desc'>
+          <div class='nameH'>קוֹף</div>
+          <div class='nameD'>Kof</div>
+          <div class='value'>100</div>
+          <div class='traits'></div>
+        </div>   
+<!--    <div class='txt'>
+        </div>-->
+     </div>
+   </div>
+</td><!--}-->
+</tr><!--}-->
+</table><!--}-->
+
+D = Kann einen <i>Dagesh Qal</i> enthalten.
+
+</body>
+</html>
