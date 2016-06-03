@@ -8,6 +8,7 @@
 
   <script type="text/javascript">
 
+
 function localCSSRules() {
 
   addCssRule('tr {vertical-align: top}');
@@ -23,10 +24,258 @@ function localCSSRules() {
 
 }
 
+function buchstaben() {
+
+
+  return [ 
+  {
+     char  : 'א',
+     nameH :'אָלֶף',
+     nameD :'Aleph',
+     value : 1,
+     traits: undefined, // Beachte: der Zahlenwert von <b>אלף</b> ist <b>111</b>.
+  },
+  {
+     char  : 'ב',
+     nameH :'בֵּית',
+     nameD :'Beth',
+     value : 2,
+     traits: 'D',
+  },
+  {
+     char  : 'ג',
+     nameH :'גִּמֶל',
+     nameD :'Gimel',
+     value : 3,
+     traits: 'D',
+  },
+  {
+     char  : 'ד',
+     nameH :'דָּלֶת',
+     nameD :'Dalet',
+     value : 4,
+     traits: 'D',
+  },
+  {
+     char  : 'ה',
+     nameH :'הֵא',
+     nameD :'He',
+     value : 5,
+     traits: 'D',
+//           Der definite Artikel.
+  },
+  {
+     char  : 'ו',
+     nameH :'וָו',
+     nameD :'Wav',
+     value : 6,
+     traits: '',
+     dt    : 'Haken',
+     strong: 2053, // 2mo-20-53
+  },
+  {
+     char   : 'ז',
+     nameH  :'זָיִן',
+     nameD  :'Zajin',
+     value  : 7,
+     traits: '',
+     dt     : 'Schwert', // od. Waffe
+  },
+  {
+     char  : 'ח',
+     nameH :'חֵית',
+     nameD :'Chet',
+     value : 8,
+     traits: '',
+  },
+  {
+     char  : 'ט',
+     nameH :'טֵית',
+     nameD :'Tet',
+     value : 9,
+     traits: '',
+  },
+  {
+     char  : 'י',
+     nameH :'יוֹד',
+     nameD :'Jod',
+     value : 10,
+     traits: '',
+     dt    : 'Hand', // Vgl 1. Mo 3:22
+  },
+  {
+     char  : 'כ',
+     nameH :'כַּף',
+     nameD :'Kaf',
+     value : 20,
+     traits: 'D',
+     dt    :'Handfläche', // Jes 49:20
+     strong: 3709,
+  },
+  {
+     char  : 'ל',
+     nameH :'לָמֶד',
+     nameD :'Lamed',
+     value : 30,
+     traits: '',
+     dt    : 'lehren', // Vgl 5. Mose 4:1
+  },
+  {
+     char  : 'מ',
+     nameH :'מֵם',
+     nameD :'Mem',
+     value : 40,
+     traits: '',
+  },
+  {
+     char  : 'נ',
+     nameH :'נוּן',
+     nameD :'Nun',
+     value : 50,
+     traits: '',
+  },
+  {
+     char  : 'ס',
+     nameH :'סָמֶךְ',
+     nameD :'Samech',
+     value : 60,
+     traits: '',
+     dt    : '(Hand) auflegen?', // Vgl 2. Mo 29:10
+  },
+  {
+     char  : 'ע',
+     nameH :'עַיִן',
+     nameD :'Ajin',
+     value : 70,
+     traits: '',
+     dt    : 'Auge',
+     strong:  5869,
+  },
+  {
+     char  : 'פ',
+     nameH :'פֵּא',
+     nameD :'Pe',
+     value : 80,
+     traits: 'D',
+     dt    :'Mund',
+  },
+  {
+     char  : 'צ',
+     nameH :'צָדֵי',
+     nameD :'Zade',
+     value : 90,
+     traits: '',
+  },
+  {
+     char  : 'ק',
+     nameH :'קוֹף',
+     nameD :'Kof',
+     value : 100,
+     traits: '',
+  },
+  {
+     char  : 'ר',
+     nameH :'רֵישׁ',
+     nameD :'Resch',
+     value : 200,
+     traits: '',
+  },
+  {
+     char  : 'ש',
+     nameH :'שִׁין',
+     nameD :'Schin',
+     value : 300,
+     traits: '',
+  },
+  {
+     char  : 'ת',
+     nameH :'תָּו',
+     nameD :'Tav',
+     value : 400,
+     traits: '',
+  },
+  {
+     char  : 'ך',
+     nameH :'כַּף סופית',
+     nameD :'Kaf Sofit',
+     value : 500,
+     traits: '',
+  },
+  {
+     char  : 'ם',
+     nameH :'מֵם סופית',
+     nameD :'Mem Sofit',
+     value : 600,
+     traits: '',
+  },
+  {
+     char  : 'ן',
+     nameH :'נוּן סופית',
+     nameD :'Nun Sofit',
+     value : 700,
+     traits: '',
+  },
+  {
+     char  : 'ף',
+     nameH :'פֵּא סופית',
+     nameD :'Pe Sofit',
+     value : 800,
+     traits: '',
+  },
+  {
+     char  : 'ץ',
+     nameH :'צָדֵי סופית',
+     nameD :'Zade Sofit',
+     value : 900,
+     traits: '',
+  },
+  ];
+
+
+
+}
+
+function buchstabenTabelle() {
+
+  var staben = buchstaben();
+
+  var tab = document.getElementById('buchstaben');
+
+  for (var r=0; r<3; r++) {
+
+    var row = tab.insertRow(r);
+    for (var c=0; c<9; c++) {
+  
+        var cell = row.insertCell(c);
+
+        var stabe = staben[9*r + 8-c];
+        
+        cell.innerHTML = "<div class='buchstabe'>" +
+    "<div class='H'>" + stabe.char + "</div>" +
+    "<div class='M'>" +
+    "<div class='desc'>"+ 
+      "<div class='nameH'>" + stabe.nameH + "</div>" +
+      "<div class='nameD'>" + stabe.nameD + "</div>" +
+      "<div class='value'>" + stabe.value + "</div>" +
+      "<div class='traits'>" + stabe.traits + "</div>" +
+   "</div>";
+
+    }
+
+
+  }
+
+
+
+//document.body.appendChild(tab);
+
+}
+
 function main() {
 
   insertGlobalStyleSheet();
   localCSSRules();
+  buchstabenTabelle();
 
 }
 
@@ -36,431 +285,9 @@ function main() {
 
 <body onload='main()'>
 
-<table summary='.' class='otiyot'> <!--{-->
-<tr><!--{-->
-<td><!--{-->
-   <div class='buchstabe'>
-     <div class='H'>ט</div>
-     <div class='M'>
-        <div class='desc'>
-          <div class='nameH'>טֵית</div>
-          <div class='nameD'>Tet</div>
-          <div class='value'>9</div>
-          <div class='traits'></div>
-        </div>   
-        <div class='txt'>
-        </div>
-     </div>
-   </div>
-</td><!--}-->
-<td><!--{-->
-   <div class='buchstabe'>
-     <div class='H'>ח</div>
-     <div class='M'>
-        <div class='desc'>
-          <div class='nameH'>חֵית</div>
-          <div class='nameD'>Chet</div>
-          <div class='value'>8</div>
-          <div class='traits'></div>
-        </div>   
-<!--     <div class='txt'>
-           Buchstabe = Wav + Zajin.
-        </div> -->
-     </div>
-   </div>
-</td><!--}-->
-<td><!--{-->
-   <div class='buchstabe'>
-     <div class='H'>ז</div>
-     <div class='M'>
-        <div class='desc'>
-          <div class='nameH'>זָיִן</div>
-          <div class='nameD'>Zajin</div>
-          <div class='value'>7</div>
-          <div class='traits'></div>
-        </div>   
-<!--    <div class='txt'>
-          Bedeutung: Schwert, Waffe
-        </div> -->
-     </div>
-   </div>
-</td><!--}-->
-<td><!--{-->
-   <div class='buchstabe'>
-     <div class='H'>ו</div>
-     <div class='M'>
-        <div class='desc'>
-          <div class='nameH'>וָו</div>
-          <div class='nameD'>Wav</div>
-          <div class='value'>6</div>
-          <div class='traits'></div>
-        </div>   
-<!--    <div class='txt'>
-          Bedeutung: Haken (<a href='http://bibel.renenyffenegger.ch/2mo_27.html#v10'>2.&nbsp;Mo&nbsp;27,10</a>)
-        </div> -->
-     </div>
-   </div>
-</td><!--}-->
-<td><!--{-->
-   <div class='buchstabe'>
-     <div class='H'>ה</div>
-     <div class='M'>
-        <div class='desc'>
-          <div class='nameH'>הֵא</div>
-          <div class='nameD'>He</div>
-          <div class='value'>5</div>
-          <div class='traits'>D</div>
-        </div>   
-<!--    <div class='txt'>
-          Der definite Artikel.
-        </div> -->
-     </div>
-   </div>
-</td><!--}-->
-<td><!--{-->
-   <div class='buchstabe'>
-     <div class='H'>ד</div>
-     <div class='M'>
-        <div class='desc'>
-          <div class='nameH'>דָּלֶת</div>
-          <div class='nameD'>Dalet</div>
-          <div class='value'>4</div>
-          <div class='traits'>D</div>
-        </div>   
-<!--    <div class='txt'>
-        </div>-->
-     </div>
-   </div>
-</td><!--}-->
-<td><!--{-->
-   <div class='buchstabe'>
-     <div class='H'>ג</div>
-     <div class='M'>
-        <div class='desc'>
-          <div class='nameH'>גִּמֶל</div>
-          <div class='nameD'>Gimel</div>
-          <div class='value'>3</div>
-          <div class='traits'>D</div>
-        </div>   
-<!--    <div class='txt'>
-        </div>-->
-     </div>
-   </div>
-</td><!--}-->
-<td><!--{-->
-   <div class='buchstabe'>
-     <div class='H'>ב</div>
-     <div class='M'>
-        <div class='desc'>
-          <div class='nameH'>בֵּית</div>
-          <div class='nameD'>Beth</div>
-          <div class='value'>2</div>
-          <div class='traits'>D</div>
-        </div>   
-<!--    <div class='txt'>
-        </div>-->
-     </div>
-   </div>
-</td><!--}-->
-<td><!--{-->
-   <div class='buchstabe'>
-     <div class='H'>א</div>
-     <div class='M'>
-        <div class='desc'>
-          <div class='nameH'>אָלֶף</div>
-          <div class='nameD'>Aleph</div>
-          <div class='value'>1</div>
-          <div class='traits'></div>
-        </div>   
-<!--    <div class='txt'>
-             Beachte: der Zahlenwert von <b>אלף</b> ist <b>111</b>.
-        </div>-->
-     </div>
-   </div>
-</td><!--}-->
-</tr><!--}-->
-<tr><!--{-->
-<td><!--{-->
-   <div class='buchstabe'>
-     <div class='H'>צ</div>
-     <div class='M'>
-        <div class='desc'>
-          <div class='nameH'>צָדֵי</div>
-          <div class='nameD'>Zade</div>
-          <div class='value'>90</div>
-          <div class='traits'></div>
-        </div>   
-<!--    <div class='txt'>
-        </div>-->
-     </div>
-   </div>
-</td><!--}-->
-<td><!--{-->
-   <div class='buchstabe'>
-     <div class='H'>פ</div>
-     <div class='M'>
-        <div class='desc'>
-          <div class='nameH'>פֵּא</div>
-          <div class='nameD'>Pe</div>
-          <div class='value'>80</div>
-          <div class='traits'>D</div>
-        </div>   
-<!--    <div class='txt'>
-          Bedeutung: Mund.
-        </div>-->
-     </div>
-   </div>
-</td><!--}-->
-<td><!--{-->
-   <div class='buchstabe'>
-     <div class='H'>ע</div>
-     <div class='M'>
-        <div class='desc'>
-          <div class='nameH'>עַיִן</div>
-          <div class='nameD'>Ajin</div>
-          <div class='value'>70</div>
-          <div class='traits'></div>
-        </div>   
-<!--    <div class='txt'>
-           Bedeutung: Auge.
-        </div>-->
-     </div>
-   </div>
-</td><!--}-->
-<td><!--{-->
-   <div class='buchstabe'>
-     <div class='H'>ס</div>
-     <div class='M'>
-        <div class='desc'>
-          <div class='nameH'>סָמֶךְ</div>
-          <div class='nameD'>Samech</div>
-          <div class='value'>60</div>
-          <div class='traits'></div>
-        </div>   
-<!--    <div class='txt'>
-          Bedeutung: to lean upon (2. Mo 29:10?)
-        </div>-->
-     </div>
-   </div>
-</td><!--}-->
-<td><!--{-->
-   <div class='buchstabe'>
-     <div class='H'>נ</div>
-     <div class='M'>
-        <div class='desc'>
-          <div class='nameH'>נוּן</div>
-          <div class='nameD'>Nun</div>
-          <div class='value'>50</div>
-          <div class='traits'></div>
-        </div>   
-<!--    <div class='txt'>
-        </div>-->
-     </div>
-   </div>
-</td><!--}-->
-<td><!--{-->
-   <div class='buchstabe'>
-     <div class='H'>מ</div>
-     <div class='M'>
-        <div class='desc'>
-          <div class='nameH'>מֵם</div>
-          <div class='nameD'>Mem</div>
-          <div class='value'>40</div>
-          <div class='traits'></div>
-        </div>   
-<!--    <div class='txt'>
-        </div>-->
-     </div>
-   </div>
-</td><!--}-->
-<td><!--{-->
-   <div class='buchstabe'>
-     <div class='H'>ל</div>
-     <div class='M'>
-        <div class='desc'>
-          <div class='nameH'>לָמֶד</div>
-          <div class='nameD'>Lamed</div>
-          <div class='value'>30</div>
-          <div class='traits'></div>
-        </div>   
-<!--    <div class='txt'>
-            Der mittlere (?) Buchstaben. Bedetung: lehren (5. Mose 4:1).
-            Prefix: zu, nach.
-        </div>-->
-     </div>
-   </div>
-</td><!--}-->
-<td><!--{-->
-   <div class='buchstabe'>
-     <div class='H'>כ</div>
-     <div class='M'>
-        <div class='desc'>
-          <div class='nameH'>כַּף</div>
-          <div class='nameD'>Kaf</div>
-          <div class='value'>20</div>
-          <div class='traits'>D</div>
-        </div>   
-<!--    <div class='txt'>
-          Bedeutung: Handfl&auml;che, als Prefix: wie. Als Suffix: Eigentum.
-        </div>-->
-     </div>
-   </div>
-</td><!--}-->
-<td><!--{-->
-   <div class='buchstabe'>
-     <div class='H'>י</div>
-     <div class='M'>
-        <div class='desc'>
-          <div class='nameH'>יוֹד</div>
-          <div class='nameD'>Jod</div>
-          <div class='value'>10</div>
-          <div class='traits'></div>
-        </div>   
-<!--    <div class='txt'>
-          Bedeutung: Hand.
-        </div>-->
-     </div>
-   </div>
-</td><!--}-->
-</tr><!--}-->
-<tr><!--{-->
-<td><!--{-->
-   <div class='buchstabe'>
-     <div class='H'>ץ</div>
-     <div class='M'>
-        <div class='desc'>
-          <div class='nameH'>צָדֵי סופית</div>
-          <div class='nameD'>Zade Sofit</div>
-          <div class='value'>900</div>
-          <div class='traits'></div>
-        </div>   
-<!--    <div class='txt'>
-        </div>-->
-     </div>
-   </div>
-</td><!--}-->
-<td><!--{-->
-   <div class='buchstabe'>
-     <div class='H'>ף</div>
-     <div class='M'>
-        <div class='desc'>
-          <div class='nameH'>פֵּא סופית</div>
-          <div class='nameD'>Pe Sofit</div>
-          <div class='value'>800</div>
-          <div class='traits'></div>
-        </div>   
-        <div class='txt'>
-        </div>
-     </div>
-   </div>
-</td><!--}-->
-<td><!--{-->
-   <div class='buchstabe'>
-     <div class='H'>ן</div>
-     <div class='M'>
-        <div class='desc'>
-          <div class='nameH'>נוּן סופית</div>
-          <div class='nameD'>Nun Sofit</div>
-          <div class='value'>700</div>
-          <div class='traits'></div>
-        </div>   
-<!--    <div class='txt'>
-        </div>-->
-     </div>
-   </div>
-</td><!--}-->
-<td><!--{-->
-   <div class='buchstabe'>
-     <div class='H'>ם</div>
-     <div class='M'>
-        <div class='desc'>
-          <div class='nameH'>מֵם סופית</div>
-          <div class='nameD'>Mem Sofit</div>
-          <div class='value'>600</div>
-          <div class='traits'></div>
-        </div>   
-<!--    <div class='txt'>
-        </div>-->
-     </div>
-   </div>
-</td><!--}-->
-<td><!--{-->
-   <div class='buchstabe'>
-     <div class='H'>ך</div>
-     <div class='M'>
-        <div class='desc'>
-          <div class='nameH'>כַּף סופית</div>
-          <div class='nameD'>Kaf Sofit</div>
-          <div class='value'>500</div>
-          <div class='traits'></div>
-        </div>   
-<!--    <div class='txt'>
-        </div>-->
-     </div>
-   </div>
-</td><!--}-->
-<td><!--{-->
-   <div class='buchstabe'>
-     <div class='H'>ת</div>
-     <div class='M'>
-        <div class='desc'>
-          <div class='nameH'>תָּו</div>
-          <div class='nameD'>Tav</div>
-          <div class='value'>400</div>
-          <div class='traits'></div>
-        </div>   
-<!--    <div class='txt'>
-        </div>-->
-     </div>
-   </div>
-</td><!--}-->
-<td><!--{-->
-   <div class='buchstabe'>
-     <div class='H'>ש</div>
-     <div class='M'>
-        <div class='desc'>
-          <div class='nameH'>שִׁין</div>
-          <div class='nameD'>Schin</div>
-          <div class='value'>300</div>
-          <div class='traits'></div>
-        </div>   
-<!--    <div class='txt'>
-        </div>-->
-     </div>
-   </div>
-</td><!--}-->
-<td><!--{-->
-   <div class='buchstabe'>
-     <div class='H'>ר</div>
-     <div class='M'>
-        <div class='desc'>
-          <div class='nameH'>רֵישׁ</div>
-          <div class='nameD'>Resch</div>
-          <div class='value'>200</div>
-          <div class='traits'></div>
-        </div>   
-<!--    <div class='txt'>
-        </div>-->
-     </div>
-   </div>
-</td><!--}-->
-<td><!--{-->
-   <div class='buchstabe'>
-     <div class='H'>ק</div>
-     <div class='M'>
-        <div class='desc'>
-          <div class='nameH'>קוֹף</div>
-          <div class='nameD'>Kof</div>
-          <div class='value'>100</div>
-          <div class='traits'></div>
-        </div>   
-<!--    <div class='txt'>
-        </div>-->
-     </div>
-   </div>
-</td><!--}-->
-</tr><!--}-->
-</table><!--}-->
+
+  <table id='buchstaben'></table>
+
 
 D = Kann einen <i>Dagesh Qal</i> enthalten.
 
