@@ -4,6 +4,7 @@
   <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
   <title>Buchstaben (Otiyot)</title>
 
+
   <script type="text/javascript" src="global.js"></script>
 
   <script type="text/javascript">
@@ -21,6 +22,10 @@ function localCSSRules() {
   addCssRule('.buchstabe .M {padding-top:30px;/*background-color:yellow*/}');
   addCssRule('.buchstabe .M .desc {/*background-color:red;*/float:left;width:70px}');
   addCssRule('.buchstabe .M .traits {font-size:9px;}');
+
+  // ähnliche Buchstaben
+  addCssRule('tr.aehnlich td {font-size: 30px; font-family: ' + font_hebr + ';}');
+
 
 }
 
@@ -265,10 +270,6 @@ function buchstabenTabelle() {
 
   }
 
-
-
-//document.body.appendChild(tab);
-
 }
 
 function main() {
@@ -287,9 +288,37 @@ function main() {
 
 
   <table id='buchstaben'></table>
-
-
 D = Kann einen <i>Dagesh Qal</i> enthalten.
+
+  <h1>Ähnliche Buchstaben</h1>
+
+    <h2>Aussehen</h2>
+
+      <table>
+        <tr class='aehnlich'><td>ת</td><td>ח</td><td>ה</td></tr>
+        <tr class='aehnlich'><td> </td><td>כ</td><td>ב</td></tr>
+        <tr class='aehnlich'><td>ן</td><td>ז</td><td>ו</td></tr>
+        <tr class='aehnlich'><td>ך</td><td>ר</td><td>ד</td></tr>
+        <tr class='aehnlich'><td> </td><td>צ</td><td>ע</td></tr>
+        <tr class='aehnlich'><td> </td><td>ם</td><td>ס</td></tr>
+      </table>
+
+      Übrigens: <span class='h'>דֶּרֶךְ</span> = Weg, <span class='h'>עֵץ</span> = Baum, <span class='h'>צַעֲצֻעִים</span> = Bilder.
+
+    <h2>Aussprache</h2>
+
+      <table>
+        <tr class='aehnlich'><td> </td><td>ע</td><td>א</td></tr>
+        <tr class='aehnlich'><td> </td><td>ו</td><td>ב</td></tr>
+        <tr class='aehnlich'><td> </td><td>כ</td><td>ח</td></tr>
+        <tr class='aehnlich'><td> </td><td>תּ</td><td>ט</td></tr>
+        <tr class='aehnlich'><td>ק</td><td>כּ</td><td>ת</td></tr>
+        <tr class='aehnlich'><td> </td><td>שׂ</td><td>ס</td></tr>
+      </table>
+
+
+
+
 
 </body>
 </html>

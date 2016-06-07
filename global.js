@@ -19,6 +19,7 @@ function insertGlobalStyleSheet() {
 
   gStyleSheet = document.styleSheets[0];
   gStyleSheet.insertRule(' * {font-family: ' + font_text + '}', 0);
+  gStyleSheet.insertRule(' span.h {font-family: ' + font_hebr + '}', 0);
 
 }
 
